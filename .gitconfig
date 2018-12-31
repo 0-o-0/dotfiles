@@ -1,0 +1,35 @@
+[user]
+  name = Chunqi Li
+  email = nnqiscf@gmail.com
+[core]
+  editor = vim
+[alias]
+  amend = commit --amend --reuse-message=HEAD
+  ca = commit --amend
+  s = status -s
+  l = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold magenta)<%an>%Creset' -n 80 --graph --abbrev-commit
+  la = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold magenta)<%an>%Creset' -n 80 --graph --abbrev-commit --all
+  d = diff
+  co = checkout
+  cp = cherry-pick
+  p = pull origin master -r
+  br = branch
+  rbi = "!git rebase -i HEAD~\"$1\" #"
+  rbc = rebase --continue
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  ui = auto
+[color "branch"]
+  gcurrent = yellow reverse
+  local = yellow
+  gcremote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold # line info
+  old = red # deletions
+  new = green # additions
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
